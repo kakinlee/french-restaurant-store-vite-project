@@ -1,18 +1,26 @@
 import './App.css'; 
-import Slide from './components/slide.tsx'
-import Header from './components/header.tsx'
-import Card from './components/card.tsx'
-import Footer from './components/footer.tsx'
+import Layout from './page/layout.tsx';
+import Home from './page/home.tsx';
+import Restaurant from './page/restaurant.tsx';
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
 function App() {
-  // const [count, setCount] = useState(0)
   return (
-    <div>
-    <Header />
-    <Slide />
-    <Card />
-    <Footer />
-    </div>
+   
+    
+    <Router>
+       <Routes>
+      <Route path='/' element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/restaurant" element={<Restaurant />} />
+
+        </Route>  
+      </Routes>
+    </Router>
+
+    
+
   )
 }
 

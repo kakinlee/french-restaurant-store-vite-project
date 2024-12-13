@@ -13,6 +13,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import Restaurant from '../page/restaurant';
+import { Link } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const pages = ['餐廳菜單', '法式餐包', '歐式雜貨', '購物車'];
@@ -102,9 +104,16 @@ const theme = createTheme({
               onClose={handleCloseNavMenu}
               sx={{  display: { xs: 'block', md: 'none' } }}
             >
+              
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                  <Typography sx={{ textAlign: 'center' }}>
+                  <Link to="/restaurant">餐廳菜單</Link>
+
+                  {/* <Link to={page === 'Home' ? '/' : `/${page.toLowerCase()}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  {page}
+                </Link> */}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
