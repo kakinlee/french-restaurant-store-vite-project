@@ -14,12 +14,13 @@ footer {
       font-size: 14px;
       color: #666;
       align-items: center;
-      justify-content: space-between;
+    //   justify-content: space-between;
+      justify-content: space-around;
       max-width: 1080px;
       width: 100%;
       padding: 20px 0;
       margin: 0 auto;
-      border-top: 1px solid #aaa;
+    //   border-top: 1px solid #aaa;
       img{
         height: 40px;
       }

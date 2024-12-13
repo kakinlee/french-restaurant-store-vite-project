@@ -132,15 +132,26 @@ function Card() {
     }
   ]; // Add your products array here
 
+  const breakpoints = {
+    0: { slidesPerView: 1 },
+    350: { slidesPerView: 2 },
+    600: { slidesPerView: 3 },
+    1000: { slidesPerView: 4 }
+  };
+
   return (
     <div>
       <p className="categories_titel">最新上架</p>
       <div className="products_list">
-        {/* swiper */}
-        <Swiper slidesPerView =  {4} loop={true} pagination={true}  navigation={true} modules={[Navigation,Pagination]} className="swiper-container">
+        <Swiper slidesPerView={4} loop={true} 
+        pagination={false} navigation={true} 
+        modules={[Navigation, Pagination]} spaceBetween={10}
+        speed={600} autoplay={{ delay: 5000 }}
+        breakpoints={breakpoints}
+        className="swiper-container-card">
        
           {products.map((product) => (
-             <SwiperSlide> 
+             <SwiperSlide className='SwiperSlide-card'> 
             <div className="swiper-slide" key={product.id}>
               <div className="categories">{product.category}</div>
               <img src={product.imageUrl} alt="" />

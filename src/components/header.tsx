@@ -6,15 +6,17 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
+import logo from '../assets/img/logo.jpg';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['餐廳菜單', '法式餐包', '歐式雜貨', '購物車'];
+// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -35,7 +37,21 @@ function Header() {
     setAnchorElUser(null);
   };
 
+
+const theme = createTheme({
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#fff', // 自訂背景色
+          boxShadow: 'none',
+        },
+      },
+    },
+  },
+});
   return (
+    <ThemeProvider theme={theme}>
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -51,11 +67,11 @@ function Header() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            法國料理
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -65,10 +81,11 @@ function Header() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color='default'
             >
               <MenuIcon />
             </IconButton>
+           
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -83,7 +100,7 @@ function Header() {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: 'block', md: 'none' } }}
+              sx={{  display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -92,6 +109,7 @@ function Header() {
               ))}
             </Menu>
           </Box>
+          
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
@@ -105,24 +123,26 @@ function Header() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            法國料理
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'black', display: 'block' }}
               >
                 {page}
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+          <img src={logo} alt="menu" onClick={handleOpenNavMenu} style={{width: '50px', height: '40px'}} />
+           
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -150,10 +170,11 @@ function Header() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>
+    </ThemeProvider>
   );
 }
 export default Header;
