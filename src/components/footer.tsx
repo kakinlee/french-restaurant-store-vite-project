@@ -1,8 +1,5 @@
 import './footer.scss';
 import AppBar from "@mui/material/AppBar";
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import logo from '../assets/img/logo.jpg';

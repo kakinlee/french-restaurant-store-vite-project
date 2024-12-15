@@ -8,12 +8,9 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../assets/img/logo.jpg';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import Restaurant from '../page/restaurant';
 import { Link } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -27,17 +24,11 @@ function Header() {
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
 
 const theme = createTheme({
@@ -55,9 +46,12 @@ const theme = createTheme({
   return (
     <ThemeProvider theme={theme}>
     <AppBar position="static">
+      
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          
           <Typography
             variant="h6"
             noWrap
@@ -72,8 +66,11 @@ const theme = createTheme({
               color: 'black',
               textDecoration: 'none',
             }}
-          >
-            法國料理
+          > 
+                    <img src={logo} alt="menu" onClick={handleOpenNavMenu} style={{width: '50px', height: '40px'}} />
+           
+                    <Link  style={{ textDecoration: 'none', color: 'inherit' ,    display: 'flex',
+              flexDirection: 'column',    justifyContent: 'center'}} to="/">法國料理</Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -105,17 +102,23 @@ const theme = createTheme({
               sx={{  display: { xs: 'block', md: 'none' } }}
             >
               
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>
-                  <Link to="/restaurant">餐廳菜單</Link>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography sx={{ textAlign: 'center' }}> 
+ 
 
-                  {/* <Link to={page === 'Home' ? '/' : `/${page.toLowerCase()}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                  {page}
-                </Link> */}
+           <Link  style={{ textDecoration: 'none', color: 'inherit' ,display: 'flex',
+    flexDirection: 'column'}} to="/restaurant">餐廳菜單</Link> 
+           <Link  style={{ textDecoration: 'none', color: 'inherit' ,display: 'flex',
+    flexDirection: 'column'}}  to="/restaurant">法式餐包</Link> 
+           <Link   style={{ textDecoration: 'none', color: 'inherit' ,display: 'flex',
+    flexDirection: 'column'}}  to="/restaurant">歐式雜貨</Link> 
+           <Link   style={{ textDecoration: 'none', color: 'inherit' ,display: 'flex',
+    flexDirection: 'column'}}  to="/restaurant">購物車</Link> 
+         
+                
                   </Typography>
+                 
                 </MenuItem>
-              ))}
             </Menu>
           </Box>
           
@@ -124,7 +127,7 @@ const theme = createTheme({
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -136,50 +139,20 @@ const theme = createTheme({
               textDecoration: 'none',
             }}
           >
-            法國料理
+                <img src={logo} alt="menu" onClick={handleOpenNavMenu} style={{width: '50px', height: '40px'}} />
+           
+            <Link  style={{ textDecoration: 'none', color: 'inherit' ,    display: 'flex',
+              flexDirection: 'column',    justifyContent: 'center'}} to="/">法國料理</Link>
+
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+          <Button sx={{ my: 2, color: 'black', display: 'block' }}>  <Link  style={{ textDecoration: 'none', color: 'inherit' }} to="/restaurant">餐廳菜單</Link> </Button>
+          <Button sx={{ my: 2, color: 'black', display: 'block' }}>  <Link  style={{ textDecoration: 'none', color: 'inherit' }} to="/restaurant">法式餐包</Link> </Button>
+          <Button sx={{ my: 2, color: 'black', display: 'block' }}>  <Link  style={{ textDecoration: 'none', color: 'inherit' }} to="/restaurant">歐式雜貨</Link> </Button>
+          <Button sx={{ my: 2, color: 'black', display: 'block' }}>  <Link  style={{ textDecoration: 'none', color: 'inherit' }} to="/restaurant">購物車</Link> </Button>
+         
           </Box>
-          <img src={logo} alt="menu" onClick={handleOpenNavMenu} style={{width: '50px', height: '40px'}} />
-           
-          {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
+
         </Toolbar>
       </Container>
     </AppBar>

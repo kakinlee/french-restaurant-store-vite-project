@@ -1,0 +1,107 @@
+[
+    {
+        "index": 1,
+        "title": "法式洋蔥湯（Soupe à l’oignon）",
+        "description": "法式洋蔥湯主要以牛肉湯搭配焦化的洋蔥長時間燉煮而成，除了湯頭本身之外，表面還會撒上烤起司和酥脆的麵包屑，再用高溫烤至金黃色，其味道香濃四溢，並擁有多層次口感，是許多人心目中最經典的法式料理前菜。",
+        "category": "法國菜前菜",
+        "image": "src/assets/img/restaurant/法式洋蔥湯.jpg"
+    },
+    {
+        "index": 2,
+        "title": "鵝肝醬（Foie gras）",
+        "description": "鵝肝醬是與魚子醬、松露並稱「3 大珍饈」的高級美食之一，其主要是透過特殊的飼養和加工程序後製作而成，柔軟、絲滑且富有奶油般質地的特殊口感，作為前菜可與麵包或脆餅搭配，細膩且獨特的味覺體驗總能讓嚐過的人為之著迷。",
+        "category": "法國菜前菜",
+        "image": "src/assets/img/restaurant/鵝肝醬.jpg"
+    },
+    {
+        "index": 3,
+        "title": "法式青蛙腿（Cuisses de grenouille）",
+        "description": "青蛙腿以其結實細嫩的口感成為法式料理的寵兒之一，烹調上主要會以簡單的乾煎方式，搭配大蒜和檸檬汁提味，使得外層呈現酥脆金黃，內部則保持多汁嫩滑，讓你每一口都能充分品味到肉質的鮮美。",
+        "category": "法國菜前菜",
+        "image": "src/assets/img/restaurant/法式青蛙腿.jpg"
+    },
+    {
+        "index": 4,
+        "title": "法式蝸牛（Escargots）",
+        "description": "經典的法式蝸牛在烹調時會以特製的蝸牛夾具夾在蝸牛殼內，再搭配濃郁的香蒜奶油和香草醬汁，通過高溫烘烤使其外皮呈現金黃色的誘人外觀，每一口都散發出奶油蒜香和香草的芬芳香氣，口感細膩嫩滑，並具有微妙的彈牙感。",
+        "category": "法國菜前菜",
+        "image": "src/assets/img/restaurant/法式蝸牛.jpg"
+    },
+    {
+        "index": 5,
+        "title": "兔肉（Lapin）",
+        "description": "除了蛙腿、蝸牛外，兔肉也是法式料理經常使用的食材之一。兔肉的烹調方式相當多元，不論是燉煮、煎、炒或放入烤箱烘烤，其綿密的口感能夠完美融合各種調味料和烹調方式，因此深受廣大美食愛好者的喜愛。",
+        "category": "法國菜主食",
+        "image": "src/assets/img/restaurant/兔肉.jpg"
+    },
+    {
+        "index": 6,
+        "title": "法國生牛肉（Tartare de boeuf）",
+        "description": "法國生牛肉又稱「韃靼牛肉」，主要使用新鮮的生牛肉切成小塊或剁碎後，再搭配香蔥、酸豆和蛋黃醬等調味製作而成，其口感滑嫩濕潤、味道清爽不厚重，是一道深受法國人喜愛的經典料理。",
+        "category": "法國菜主食",
+        "image": "src/assets/img/restaurant/法國生牛肉.jpg"
+    },
+    {
+        "index": 7,
+        "title": "香煎鴨胸（Magret de Canard）",
+        "description": "鴨胸具有特殊的油香和類似牛肉的口感，簡單乾煎自帶有微粉紅色熟度後，搭配上紅酒焦糖洋蔥醬汁，肉本身濃郁的香氣和醬汁淡淡的酸甜風味完美融合，絕妙的組合讓人吃過一次便難以忘懷。",
+        "category": "法國菜主食",
+        "image": "src/assets/img/restaurant/香煎鴨胸.jpg"
+    },
+    {
+        "index": 8,
+        "title": "紅酒燉牛肉（Bœuf bourguignon）",
+        "description": "這道料理主要使用牛肉、紅蘿蔔、洋蔥、蘑菇及大蒜等食材，加入紅酒和香料緩慢燉煮而成。紅酒的加入除了軟化了肉的纖維，同時也為整道料理增添了濃郁的酒香，每一口品嚐下去，都能感受到溫暖的滋味在口腔中化開。",
+        "category": "法國菜主食",
+        "image": "src/assets/img/restaurant/紅酒燉牛肉.jpg"
+    },
+    {
+        "index": 9,
+        "title": "生蠔（Huîtres）",
+        "description": "法式生蠔是法國料理中追求新鮮高級食材的絕佳代表，所有法式餐廳均會嚴選當地的新鮮生蠔，其鮮嫩的口感與滿溢的海洋風味相得益彰，再配上檸檬汁或葡萄醋酸甜調和，每一口都如同一場無與倫比的海鮮盛宴。",
+        "category": "法國菜主食",
+        "image": "src/assets/img/restaurant/生蠔.jpg"
+    },
+    {
+        "index": 10,
+        "title": "淡菜鍋（Moules marinières）",
+        "description": "淡菜鍋是法式料理中極受歡迎的一道菜餚，它的料理方式非常簡單，只需將大蒜和芹菜炒至散發香氣，然後加入淡菜和白酒，蓋上鍋蓋悶煮片刻即可。鮮甜海鮮風味與白酒的清香相互輝映，許多法國人甚至會將鍋底的湯汁當成沾料，搭配法國麵包一同享用。",
+        "category": "法國菜主食",
+        "image": "src/assets/img/restaurant/淡菜鍋.jpg"
+    },
+    {
+        "index": 11,
+        "title": "馬賽魚湯（Bouillabaisse）",
+        "description": "馬賽魚湯與中國上湯和泰國的冬陰湯共同並列世界 3 大湯頭之一，湯頭主要會使用至少 4 種以上的地中海魚類進行燉煮，再加入番茄、洋蔥、大蒜和香草等調味料。在燉煮過程中，魚的鮮美會滲入湯中，使得湯頭濃郁並充滿了異域風情，讓人無法抗拒。",
+        "category": "法國菜主食",
+        "image": "src/assets/img/restaurant/馬賽魚湯.jpg"
+    },
+    {
+        "index": 12,
+        "title": "普羅旺斯燉菜（Ratatouille）",
+        "description": "普羅旺斯燉菜是源自於法國南部普羅旺斯和尼斯的家常菜餚，其主要以番茄、茄子、洋蔥和甜椒等多種的蔬菜作為主要食材，再添加香草、大蒜和橄欖油等調味料後慢慢燉煮而成。蔬果五顏六色的色彩搭配上精緻的擺盤，不僅能滿足味蕾的享受，更讓整道菜成為一件令人賞心悅目的藝術品。",
+        "category": "法國菜主食",
+        "image": "src/assets/img/restaurant/普羅旺斯燉菜.jpg"
+    },
+    {
+        "index": 13,
+        "title": "馬卡龍（Macaron）",
+        "description": "馬卡龍又被譽為「少女的酥胸」，其最大的特點就在於繽紛多彩的顏色，一上桌就能立即吸引所有人的目光。而在味道和口感方面，馬卡龍的外殼堅硬易碎，內餡則柔軟黏稠，每一口都帶來了絕妙的甜蜜和愉悅的口感，令人陶醉其中。",
+        "category": "法國菜甜點",
+        "image": "src/assets/img/restaurant/馬卡龍.jpg"
+    },
+    {
+        "index": 14,
+        "title": "焦糖烤布蕾（Crème brûlée）",
+        "description": "焦糖烤布蕾的味道濃郁香甜，外層烤至金黃酥脆的焦糖外殼，破開後露出內部的滑順布蕾，加上濃厚的奶油和香草滋味，讓人愛不釋口的美味使得烤布蕾不僅在法式料理中受歡迎，更是許多餐廳的經典飯後甜點之一。",
+        "category": "法國菜甜點",
+        "image": "src/assets/img/restaurant/焦糖烤布蕾.jpg"
+    },
+    {
+        "index": 15,
+        "title": "瑪德蓮（Madeleine）",
+        "description": "瑪德蓮是法國宮廷中著名的甜點，其外觀呈現小巧可愛的貝殼狀，外皮酥脆，內部柔軟豐潤，一咬下去便可以感受到濃郁的奶香飄散在口中，並伴隨著柑橘或香草的迷人風味，絕妙的味覺體驗使其成為了許多饕客在享用完法式料理後必點的甜品。",
+        "category": "法國菜甜點",
+        "image": "src/assets/img/restaurant/瑪德蓮.jpg"
+    }
+]
