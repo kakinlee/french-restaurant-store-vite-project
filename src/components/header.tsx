@@ -139,8 +139,7 @@ const theme = createTheme({
               textDecoration: 'none',
             }}
           >
-                <img src={logo} alt="menu" onClick={handleOpenNavMenu} style={{width: '50px', height: '40px'}} />
-           
+                <img src={logo} alt="menu"  style={{width: '50px', height: '40px'}} />
             <Link  style={{ textDecoration: 'none', color: 'inherit' ,    display: 'flex',
               flexDirection: 'column',    justifyContent: 'center'}} to="/">法國料理</Link>
 
