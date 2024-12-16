@@ -29,12 +29,12 @@ function Footer() {
     <div className="container">
     <img src={logo} alt=""  style={{width: '50px', height: '40px'}} />
     <div className="info">
-        <p>實體店面：真新鎮大木路一段6號</p>
-        <p>營業時間：00:00-24:00</p>
+        <p>實體店面：100台灣台北市中正區重慶南路一段122號</p>
+        <p>營業時間：09:00-22:00</p>
       </div>
       <div>
-        <p>作者：icguanyu <a href="https://github.com/icguanyu" target="_blank">Github</a>｜<a href="https://codepen.io/icguanyu/" target="_blank">Codepen</a></p>
-        <p>練習作品｜<a href="https://www.pokemon.com/us/" target="_blank">圖片來源：https://www.pokemon.com/us/</a></p> 
+        <p>作者：kakinlee <a href="https://github.com/kakinlee" target="_blank"></a><a href="" target="_blank"></a></p>
+        <p>練習作品｜<a href="https://www.pokemon.com/us/" target="_blank"></a></p> 
       </div>
     </div>
   </footer>

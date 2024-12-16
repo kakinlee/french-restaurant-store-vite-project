@@ -1,5 +1,4 @@
 import './restaurantCard.scss';
-import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -9,12 +8,6 @@ import productsJson from '../data/resraurantMeau.json';
 function ResraurantCard() {
     const products = productsJson;
 
-    const breakpoints = {
-        0: { slidesPerView: 1 },
-        350: { slidesPerView: 2 },
-        600: { slidesPerView: 3 },
-        1000: { slidesPerView: 4 }
-    };
 
     return (
         <div>
@@ -27,7 +20,7 @@ function ResraurantCard() {
                             <Card sx={{ maxWidth: 320, margin: 1 }} key={product.index}>
                                 <div className="flex">
                                     <CardMedia
-                                        sx={{ height: 140 }}
+                                        sx={{ height: 250 }}
                                         image={product.image}
                                         title={product.title}
                                     />
@@ -56,7 +49,7 @@ function ResraurantCard() {
                             <Card sx={{ maxWidth: 320, margin: 1 }} key={product.index}>
                                 <div className="flex">
                                     <CardMedia
-                                        sx={{ height: 140 }}
+                                        sx={{ height: 250 }}
                                         image={product.image}
                                         title={product.title}
                                     />
@@ -84,7 +77,7 @@ function ResraurantCard() {
                             <Card sx={{ maxWidth: 320, margin: 1 }} key={product.index}>
                                 <div className="flex">
                                     <CardMedia
-                                        sx={{ height: 140 }}
+                                        sx={{ height: 250 }}
                                         image={product.image}
                                         title={product.title}
                                     />

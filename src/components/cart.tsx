@@ -22,6 +22,64 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { Box, Input, TextField } from '@mui/material';
 import { IconButton } from '@mui/material';
 import { DisplaySettings } from '@mui/icons-material';
+import cardProducts from '../data/cardProducts.json';
+import { useState, useEffect } from "react";
+
+// 定义类型
+// interface Product {
+//   id: number;
+//   category: string;
+//   imageUrl:string;
+//   title: string;
+//   description: string;
+//   price: number;
+//   origin: number;
+// }
+
+// interface CartItem extends Product {
+//   quantity: number;
+// }
+
+// interface ShoppingCartState {
+//   cartItems: CartItem[];
+// }
+
+// interface ShoppingCartProps {
+//   products: Product[];
+// }
+
+// const ShoppingCart: React.FC<ShoppingCartProps> = ({ products }) => {
+//   const [cartItems, setCartItems] = useState<CartItem[]>([]);
+
+//   const addToCart = (product: Product) => {
+//     const itemIndex = cartItems.findIndex((item) => item.id === product.id);
+//     if (itemIndex === -1) {
+//       setCartItems([...cartItems, { ...product, quantity: 1 }]);
+//     } else {
+//       const updatedItems = [...cartItems];
+//       updatedItems[itemIndex].quantity += 1;
+//       setCartItems(updatedItems);
+//     }
+//   };
+
+//   const updateQuantity = (productId: number, delta: number) => {
+//     const itemIndex = cartItems.findIndex((item) => item.id === productId);
+//     if (itemIndex !== -1) {
+//       const updatedItems = [...cartItems];
+//       const newQuantity = updatedItems[itemIndex].quantity + delta;
+//       if (newQuantity > 0) {
+//         updatedItems[itemIndex].quantity = newQuantity;
+//       } else {
+//         updatedItems.splice(itemIndex, 1);
+//       }
+//       setCartItems(updatedItems);
+//     }
+//   };
+
+//   const getTotalPrice = () => {
+//     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+//   };
+
 const theme = createTheme({
   components: {
 
@@ -121,11 +179,9 @@ export default function Cart() {
   return (
     <ThemeProvider theme={theme}>
       <React.Fragment>
-        <Button variant="outlined" onClick={handleClickOpen('paper')}>
           <div className="car">
-            <ShoppingCartIcon className="cart-icon" sx={{ color: red[900] }} />
+            <ShoppingCartIcon onClick={handleClickOpen('paper')} className="cart-icon" sx={{ color: red }} />
           </div>
-        </Button>
 
         <Dialog
           open={open}
