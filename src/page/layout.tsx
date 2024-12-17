@@ -34,14 +34,19 @@ const Layout: React.FC = () => {
       }
     });
   };
+
+  
+  const handleRemoveFromCart = (id: number) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
  
   return (
     <>
       <Header />
       <Container maxWidth="lg">
-      <Outlet  context={{ cartItems, handleAddToCart }} />
+      <Outlet  context={{ cartItems, handleAddToCart ,handleRemoveFromCart}} />
       </Container>
-      <ShoppingCart cartItems={cartItems} />
+      <ShoppingCart cartItems={cartItems} handleRemoveFromCart={handleRemoveFromCart} />
       <Footer />
     </>
   )

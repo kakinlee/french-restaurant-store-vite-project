@@ -6,7 +6,7 @@ import Dialog, { DialogProps } from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import React from 'react';
+import React, { useState } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -25,17 +25,17 @@ const theme = createTheme({
     MuiTable: {
       styleOverrides: {
         root: {
-          textAlign:"center",
+          textAlign: "center",
         },
       },
     },
     MuiTableCell: {
       styleOverrides: {
         root: {
-          textAlign:"center",
-           fontSize: '17px',
-           textWrap: 'nowrap',
-           
+          textAlign: "center",
+          fontSize: '17px',
+          textWrap: 'nowrap',
+
         },
       },
     },
@@ -67,17 +67,18 @@ interface CartItem extends Product {
 
 interface ShoppingCartProps {
   cartItems: CartItem[];
+  handleRemoveFromCart: (id: number) => void;
 }
-const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems }) => { 
+const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems, handleRemoveFromCart }) => {
 
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState<DialogProps['scroll']>('paper');
- 
+
   const handleClickOpen = (scrollType: DialogProps['scroll']) => () => {
     setOpen(true);
     setScroll(scrollType);
   };
-  
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -89,8 +90,6 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems }) => {
   const getTotalPrice = () => {
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   };
-
-  
   const descriptionElementRef = React.useRef<HTMLElement>(null);
   React.useEffect(() => {
     if (open) {
@@ -104,9 +103,9 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems }) => {
   return (
     <ThemeProvider theme={theme}>
       <React.Fragment>
-          <div className="car">
-            <ShoppingCartIcon onClick={handleClickOpen('paper')} className="cart-icon" sx={{ color: red }} />
-          </div>
+        <div className="car">
+          <ShoppingCartIcon onClick={handleClickOpen('paper')} className="cart-icon" sx={{ color: red }} />
+        </div>
 
         <Dialog
           open={open}
@@ -124,7 +123,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems }) => {
               ref={descriptionElementRef}
               tabIndex={-1}
             >
-              <TableContainer  component={Paper}>
+              <TableContainer component={Paper}>
                 <Table aria-label="spanning table" >
                   <TableHead>
                     <TableRow>
@@ -135,27 +134,25 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems }) => {
                     </TableRow>
                   </TableHead>
                   <TableBody>
-                    {/* {rows.map((row) => ( */}
                     {cartItems.map((item) => (
                       <TableRow key={item.id}>
                         <TableCell>{item.title}</TableCell>
-                        
+
                         <TableCell >
                           <TextField
                             id="outlined-number"
                             type="number"
-
                             defaultValue={item.quantity}
                           />
 
                         </TableCell>
                         <TableCell >{ccyFormat(item.price * item.quantity)}</TableCell>
-                        <TableCell >   <IconButton>
+                        <TableCell >   <IconButton onClick={() => handleRemoveFromCart(item.id)}>
+
                           <DeleteOutlineIcon />
                         </IconButton> </TableCell>
 
-
-                      </TableRow> 
+                      </TableRow>
                     ))}
 
                     <TableRow>
@@ -165,12 +162,11 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems }) => {
                   </TableBody>
                 </Table>
               </TableContainer>
-              {/* ...existing code... */}
             </DialogContentText>
             <div className="action">
-            <Button onClick={handleClose}>再逛逛</Button>
+              <Button onClick={handleClose}>再逛逛</Button>
               <Button type="submit">訂購</Button>
-              </div>
+            </div>
           </DialogContent>
         </Dialog>
       </React.Fragment>
