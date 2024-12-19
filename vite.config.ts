@@ -4,5 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/french-restaurant-store-vite-project/', 
+  build: {
+    outDir: 'dist', // 指定輸出目錄
+  },
+  base: "/",
 })
