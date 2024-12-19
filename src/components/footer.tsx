@@ -2,7 +2,7 @@ import './footer.scss';
 import AppBar from "@mui/material/AppBar";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import logo from '../assets/img/logo.jpg';
+import logo from '../../public/assets/img/logo.jpg';  
 const theme = createTheme({
     components: {
       MuiAppBar: {
