@@ -4,7 +4,7 @@ import { fileURLToPath, URL } from 'url'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/vite-project/" ,// 指定部署路徑,
+  base: "/" ,// 指定部署路徑,
   plugins: [react()],
   resolve: {
     alias: {
