@@ -7,5 +7,5 @@ export default defineConfig({
   build: {
     outDir: 'dist', // 指定輸出目錄
   },
-  base: "/",
+  base: "/vite-project/",
 })
