@@ -34,7 +34,7 @@ function Footer() {
       </div>
       <div>
         <p>作者：kakinlee <a href="https://github.com/kakinlee" target="_blank"></a><a href="" target="_blank"></a></p>
-        <p>練習作品｜<a href="https://www.pokemon.com/us/" target="_blank"></a></p> 
+        <p>練習作品<a href="https://www.pokemon.com/us/" target="_blank"></a></p> 
       </div>
     </div>
   </footer>
