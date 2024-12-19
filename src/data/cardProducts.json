@@ -2,7 +2,7 @@
     {
         "id": 1,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/鴨油薯泥.webp",
+        "imageUrl": "src/assets/img/shop/鴨油薯泥.webp",
         "title": "鴨油薯泥",
         "description": "以綿密馬鈴薯與濃郁鴨油拌合，加入香草與奶油調味，打造出法國傳統風味濃郁的副菜，完美搭配各式燉肉料理。",
         "price": 200,
@@ -11,7 +11,7 @@
     {
         "id": 2,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/馬鈴薯大蔥濃湯.webp",
+        "imageUrl": "src/assets/img/shop/馬鈴薯大蔥濃湯.webp",
         "title": "馬鈴薯大蔥濃湯(五辛奶素)",
         "description": "將馬鈴薯與嫩滑大蔥熬煮成絲滑濃湯，加入鮮奶油調和，口感溫潤，適合全素者享用。",
         "price": 250,
@@ -20,7 +20,7 @@
     {
         "id": 3,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/香料燉丸子.webp",
+        "imageUrl": "src/assets/img/shop/香料燉丸子.webp",
         "title": "香料燉丸子",
         "description": "豬牛混合肉丸搭配迷迭香、百里香等香料，燉煮至入味，番茄醬汁濃郁，佐餐麵包尤為美味。",
         "price": 500,
@@ -29,7 +29,7 @@
     {
         "id": 4,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/香啤燉軟排.webp",
+        "imageUrl": "src/assets/img/shop/香啤燉軟排.webp",
         "title": "香啤燉軟排",
         "description": "豬肋排以香啤與蔬菜慢燉，肉質酥嫩，醬汁散發麥芽香氣，是法國鄉村家庭料理的經典。",
         "price": 560,
@@ -38,7 +38,7 @@
     {
         "id": 5,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/豆泥菜肉湯.webp",
+        "imageUrl": "src/assets/img/shop/豆泥菜肉湯.webp",
         "title": "豆泥菜肉湯",
         "description": "混合各式根莖蔬菜與濃郁豆泥燉煮，加入熏肉片提味，口感濃稠，滿足感十足。",
         "price": 300,
@@ -47,7 +47,7 @@
     {
         "id": 6,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/經典洋蔥湯.webp",
+        "imageUrl": "src/assets/img/shop/經典洋蔥湯.webp",
         "title": "經典洋蔥湯",
         "description": "慢炒洋蔥至金黃，加入肉湯與白葡萄酒燉煮，佐以烤芝士麵包，風味層次豐富。",
         "price": 350,
@@ -56,7 +56,7 @@
     {
         "id": 7,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/紅酒燉雞.webp",
+        "imageUrl": "src/assets/img/shop/紅酒燉雞.webp",
         "title": "紅酒燉雞",
         "description": "雞肉配搭紅酒與洋蔥、蘑菇燉煮，醬汁濃郁，酒香與肉香相得益彰。",
         "price": 600,
@@ -65,7 +65,7 @@
     {
         "id": 8,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/紅酒燉牛肉.webp",
+        "imageUrl": "src/assets/img/shop/紅酒燉牛肉.webp",
         "title": "紅酒燉牛肉",
         "description": "牛肉塊慢燉於紅酒與香草蔬菜中，肉質軟嫩，醬汁濃稠，是法式餐桌的經典主菜。",
         "price": 700,
@@ -74,7 +74,7 @@
     {
         "id": 9,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/牛肝菌奶油燉雞.webp",
+        "imageUrl": "src/assets/img/shop/牛肝菌奶油燉雞.webp",
         "title": "牛肝菌奶油燉雞",
         "description": "以牛肝菌提升雞肉風味，奶油濃湯佐以白酒調味，呈現濃郁又不膩口的精緻滋味。",
         "price": 700,
@@ -83,7 +83,7 @@
     {
         "id": 10,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/法式三色酸甜洋蔥醬.webp",
+        "imageUrl": "src/assets/img/shop/法式三色酸甜洋蔥醬.webp",
         "title": "法式三色酸甜洋蔥醬",
         "description": "結合紅洋蔥、黃洋蔥與青洋蔥，加入葡萄酒醋與糖燉煮，酸甜適中，適合作為烤肉佐醬。",
         "price": 500,
@@ -92,7 +92,7 @@
     {
         "id": 11,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/摩洛哥燉羔羊.webp",
+        "imageUrl": "src/assets/img/shop/摩洛哥燉羔羊.webp",
         "title": "摩洛哥燉羔羊",
         "description": "以小茴香、肉桂與番紅花等香料燉煮羔羊肉，融入乾果與堅果，風味濃郁異國。",
         "price": 499,
@@ -101,7 +101,7 @@
     {
         "id": 12,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/奶油起司南瓜濃湯.webp",
+        "imageUrl": "src/assets/img/shop/奶油起司南瓜濃湯.webp",
         "title": "奶油起司南瓜濃湯",
         "description": "嫩甜南瓜與奶油、起司調和成絲滑濃湯，乳香與自然甜味完美融合。",
         "price": 400,
@@ -110,7 +110,7 @@
     {
         "id": 13,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/南法蔬菜麵湯.webp",
+        "imageUrl": "src/assets/img/shop/南法蔬菜麵湯.webp",
         "title": "南法蔬菜麵湯(五辛素)",
         "description": "結合法國南部新鮮蔬菜與義大利麵，湯底以番茄和香料調製，清新而滿足。",
         "price": 300,
@@ -119,7 +119,7 @@
     {
         "id": 14,
         "category": "food",
-        "imageUrl": "../../public/assets/img/shop/什錦蔬菜湯.webp",
+        "imageUrl": "src/assets/img/shop/什錦蔬菜湯.webp",
         "title": "什錦蔬菜湯",
         "description": "各式季節蔬菜混合燉煮，保留原味，湯底清爽健康，是法國日常餐桌上的輕食。",
         "price": 300,

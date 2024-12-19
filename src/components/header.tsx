@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from '../../public/assets/img/logo.jpg';
+import logo from '../assets/img/logo.jpg';
 import Container from '@mui/material/Container';  
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
@@ -52,7 +52,7 @@ function Header() {
               variant="h6"
               noWrap
               component="a"
-              href="/"
+              href="#app-bar-with-responsive-menu"
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },

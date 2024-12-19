@@ -11,9 +11,6 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import CardActions from '@mui/material/CardActions';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import Dialog from '@mui/material/Dialog';
 
 
 // 產品數據結構
@@ -28,15 +25,7 @@ interface Product {
 }
 
 const products: Product[] = cardProducts;
-const Products: React.FC = () => {
-    const [open, setOpen] = React.useState(false);
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-    const handleClose = () => {
-        setOpen(false);
-    };
+const Products: React.FC = () => { 
 
     const { handleAddToCart } = useOutletContext<{ handleAddToCart: (product: Product) => void }>();
 
@@ -77,10 +66,9 @@ const Products: React.FC = () => {
                                         </Typography>
                                     </Typography>
                                     <CardActions disableSpacing>
-                                        <IconButton onClick={() => { handleAddToCart(product); handleClickOpen(); }} >
+                                        <IconButton onClick={() => handleAddToCart(product)}>
                                             <AddShoppingCartIcon fontSize='large' />
                                         </IconButton>
-
 
                                     </CardActions>
 
@@ -93,19 +81,6 @@ const Products: React.FC = () => {
 
             </Box>
 
-            <Dialog
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="alert-dialog-title"
-                aria-describedby="alert-dialog-description"
-            >
-
-                <DialogContent>
-                    <DialogTitle>已加入購物車!</DialogTitle>
-
-                </DialogContent>
-
-            </Dialog>
         </Box>
     );
 }

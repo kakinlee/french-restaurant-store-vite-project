@@ -35,6 +35,16 @@ function Card() {
                                     <div className="ori_price">原價{product.origin}元</div>
                                 </div>
 
+                                {/* <div className="more">
+                {product.is_enabled ? (
+                  <a href={`/categories/${product.id}`} className="read_more">詳細介紹</a>
+                ) : (
+                  <div className="add_cart">已售完</div>
+                )}
+                {product.is_enabled && (
+                  <div className="add_cart" onClick={() => addtoCart(product.id, product.title)}>加入購物車</div>
+                )}
+              </div> */}
                             </div>
 
                             <div className="swiper-pagination" slot="pagination"></div>
