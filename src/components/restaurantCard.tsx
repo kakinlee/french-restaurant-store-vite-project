@@ -8,20 +8,21 @@ import productsJson from '../data/resraurantMeau.json';
 function ResraurantCard() {
     const products = productsJson;
 
-
     return (
         <div>
             <p className="categories_titel">法國菜前菜</p>
             <div className="products_list">
 
                 {products.map((product) => {
+                    const imageUrl = product.image;
+                    const imgUrl = new URL(imageUrl, import.meta.url).href
                     if (product.category === '法國菜前菜') {
                         return (
                             <Card sx={{ maxWidth: 320, margin: 1 }} key={product.index}>
                                 <div className="flex">
                                     <CardMedia
                                         sx={{ height: 250 }}
-                                        image={product.image}
+                                        image={imgUrl}
                                         title={product.title}
                                     />
                                 </div>
