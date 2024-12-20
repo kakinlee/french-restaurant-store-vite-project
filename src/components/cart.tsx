@@ -139,11 +139,12 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems, handleRemoveFrom
                         <TableCell>{item.title}</TableCell>
 
                         <TableCell >
-                          <TextField
+                        {item.quantity}
+                          {/* <TextField
                             id="outlined-number"
                             type="number"
                             defaultValue={item.quantity}
-                          />
+                          /> */}
 
                         </TableCell>
                         <TableCell >{ccyFormat(item.price * item.quantity)}</TableCell>
