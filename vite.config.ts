@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/vite-project/',
+  base: './',
   build: {
     outDir: 'docs', // 輸出目錄為 docs
   },
