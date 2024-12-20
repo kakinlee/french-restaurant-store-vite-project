@@ -12,9 +12,9 @@ function App() {
   return (
 
 
-    <Router basename="/vite-project">
+    <Router basename="/vite-project/">
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/restaurant" element={<Restaurant />} />
           <Route path="/productsPage" element={<ProductsPage />} />
